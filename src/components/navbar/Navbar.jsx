@@ -21,6 +21,7 @@ export const Navbar = ({menuOpen , setMenuOpen}) => {
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
+            <span className="line3"></span>
           </div>
         </div>
       </div>
