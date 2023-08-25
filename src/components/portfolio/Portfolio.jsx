@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PortfolioList from "../portfolioList/portfolioList";
+// import PortfolioList from "../portfolioList/portfolioList";
 import "./portfolio.scss";
 import {
   featuredPortfolio,
@@ -12,6 +12,16 @@ export const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
 
+  const PortfolioList = ({ id, title, active, setSelected }) => {
+    return (
+      <li
+        className={active ? "portfolioList active" : "portfolioList"}
+        onClick={() => setSelected(id)}>
+        {title}
+      </li>
+    );
+  };
+  
   const list = [
     {
       id: "featured",
